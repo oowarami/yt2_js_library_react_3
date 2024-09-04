@@ -1,0 +1,21 @@
+/* General Reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+/* Body Styles */
+body {
+  font-family: 'Arial, sans-serif';
+  background-color: #ffffff;
+  color: #000;
+}
+
+/* Main Container */
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 20px;
+}
