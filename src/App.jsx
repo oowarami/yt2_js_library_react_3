@@ -8,6 +8,7 @@ import Home from './components/home/Home';
 import Shop from './components/shop/Shop';
 import Details from './components/details/Details';
 import About from './components/about/About';
+import Contact from './components/contact/Contact';
 import Error from './components/error/Error';
 
 
@@ -23,6 +24,7 @@ function App() {
 				{/* /shop/id*/}
 				<Route path='/shop/:id' element={<Details />} />
 				<Route path='/about' element={<About />} />
+				<Route path='/contact' element={<Contact />} />
 				{/* error page for any other route that is added that is not on our page */}
 				<Route path='*' element={<Error />} />
 			</Routes>
