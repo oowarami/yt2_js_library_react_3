@@ -1,13 +1,19 @@
 import React from 'react';
-import { useEmail } from '../customHooks/useEmail';
-import {useFormik, Formik, Form, Field } from 'formik';
+// import { useEmail } from '../customHooks/useEmail';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
+// Formik and Yup component to validate the form
 const SubscribeSchema = Yup.object().shape({
 	email: Yup.string().email('Invalid email').required('Required'),
-})
+});
 
+// custom component for the error message
+const CustomError = (props) => (
+	<div className='text-red-500 text-sm mt-1'>{props.children}</div>
+);
 
 const Footer = () => {
 	return (
@@ -77,40 +83,44 @@ const Footer = () => {
 					<h3 className='text-gray-500 font-semibold'>Newsletter</h3>
 					{/* Formik form */}
 					<Formik
-						initialValues={{
-							email: '',
-						}}
+						initialValues={{ email: '' }}
 						validationSchema={SubscribeSchema}
-						onSubmit={(values) => {
-							// same shape as initial values
-
+						onSubmit={(values, { resetForm }) => {
+							toast.success('Subscribed successfully!');
+							resetForm(); // Reset form after submission
 							console.log(values);
 						}}>
 						{({ errors, touched }) => (
-							<Form
-							
-							className='flex flex-col mt-4 py-6'
-							>
-								<Field 
-								
-								name='email' 
-								type='email'
-								placeholder='Enter Your Email Address'
-								className='bg-white border border-gray-300 p-2 mb-4'
-								 />
-								{errors.email && touched.email ? (
+							<Form className='flex flex-col mt-4 py-6'>
+								<Field
+									name='email'
+									type='email'
+									placeholder='Enter Your Email Address'
+									className='bg-white border border-gray-300 p-2 mb-4'
+								/>
+								{/* Formik error validation */}
+								{/* {errors.email && touched.email ? (
 									<div>{errors.email}</div>
-								) : null}
-								<button 
-								type='submit'
-								className='bg-white text-primary w-fit p-2 border-none hover:bg-[#A8774B] hover:text-white'
-								>Subscribe</button>
+								) : null} */}
+
+								{/* Custom styled error message */}
+								<ErrorMessage name='email' component={CustomError} />
+
+								<button
+									type='submit'
+									className='bg-white text-primary w-fit p-2 border-none hover:bg-[#A8774B] hover:text-white'>
+									Subscribe
+								</button>
 							</Form>
 						)}
 					</Formik>
 
 					{/* Toastify Container */}
-					<ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} />
+					<ToastContainer
+						position='top-right'
+						autoClose={3000}
+						hideProgressBar={false}
+					/>
 				</div>
 			</div>
 
