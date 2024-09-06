@@ -1,8 +1,11 @@
 import React from 'react';
-import scandanavian from '../../assets/images/home/scandinavian-background1.png';
-import dining from '../../assets/images/home/dining.png';
-import living from '../../assets/images/home/living.png';
-import bedroom from '../../assets/images/home/bedroom.png';
+// hero image
+import scandanavian from '../../assets/images/home/hero/scandinavian-background1.png';
+// browse range images
+import dining from '../../assets/images/home/browse/dining.png';
+import living from '../../assets/images/home/browse/living.png';
+import bedroom from '../../assets/images/home/browse/bedroom.png';
+// our products images
 import slytherine from '../../assets/images/home/products/slytherine.png';
 import leviosa from '../../assets/images/home/products/leviosa.png';
 import lolito from '../../assets/images/home/products/lolito.png';
@@ -11,8 +14,26 @@ import grifo from '../../assets/images/home/products/grifo.png';
 import muggo from '../../assets/images/home/products/muggo.png';
 import pingky from '../../assets/images/home/products/pingky.png';
 import potty from '../../assets/images/home/products/potty.png';
+// inspiration images
+import Rectangle24 from '../../assets/images/home/inspiration/Rectangle24.png';
+import Rectangle25 from '../../assets/images/home/inspiration/Rectangle25.png';
+import Rectangle26 from '../../assets/images/home/inspiration/Rectangle26.png';
+// sharing images
+import rectangle36 from '../../assets/images/home/sharing/Rectangle36.png';
+import rectangle37 from '../../assets/images/home/sharing/Rectangle37.png';
+import rectangle38 from '../../assets/images/home/sharing/Rectangle38.png';
+import rectangle39 from '../../assets/images/home/sharing/Rectangle39.png';
+import rectangle40 from '../../assets/images/home/sharing/Rectangle40.png';
+import rectangle41 from '../../assets/images/home/sharing/Rectangle41.png';
+import rectangle43 from '../../assets/images/home/sharing/Rectangle43.png';
+import rectangle44 from '../../assets/images/home/sharing/Rectangle44.png';
+import rectangle45 from '../../assets/images/home/sharing/Rectangle45.png';
+// custom hooks
+import { useCarousel } from '../customHooks/useCarousel';
+
 
 const Home = () => {
+	// let {currentSlide,setCurrentSlide, interval,setInterval,clearInterval} = useCarousel(0);
 	return (
 		<>
 			<div className='relative w-full h-[70vh] md:h-screen'>
@@ -31,7 +52,7 @@ const Home = () => {
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut <br />{' '}
 						elit tellus, luctus nec ullamcorper mattis.
 					</p>
-					<button className='bg-[#C1975B] text-white text-lg font-bold py-3 px-8 rounded-md shadow-lg hover:bg-[#A8774B]'>
+					<button className='bg-secondary text-white text-lg font-bold py-3 px-8 rounded-md shadow-lg hover:bg-[#A8774B]'>
 						BUY NOW
 					</button>
 				</div>
@@ -353,27 +374,73 @@ const Home = () => {
 							Show More
 						</button>
 					</div>
-
-					{/* Inspiration */}
-					<div className='bg-inspiration my-20 mx-auto'>
-						<div className=' text-black font-poppins p-10 flex flex-row'>
-							{/* left side */}
-							<div >
-								<h2 className='font-bold text-3xl'>50+ Beautiful rooms <br/>inspiration</h2>
-								<p className='py-2'>
-									Our designer already made a lot of beautiful <br/> prototipe of
-									rooms that inspire you
-								</p>
-								<button className='text-white font-semibold bg-secondary border-secondary px-8 my-6'>Explore More</button>
-							</div>
-							{/* right side */}
-							<div className='flex items-center'>
-								Carousel
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
+
+			{/* Inspiration */}
+			<div className='bg-inspiration w-full my-20 mx-auto'>
+				<div className=' text-black font-poppins p-10 flex flex-row'>
+					{/* left side (text section)*/}
+					<div>
+						<h2 className='font-bold text-3xl'>
+							50+ Beautiful rooms <br />
+							inspiration
+						</h2>
+						<p className='py-2'>
+							Our designer already made a lot of beautiful <br /> prototipe of
+							rooms that inspire you
+						</p>
+						<button className='text-white font-semibold bg-secondary border-secondary px-8 my-6'>
+							Explore More
+						</button>
+					</div>
+					{/* right side */}
+					<div className='flex items-center'>Carousel</div>
+				</div>
+
+				{/* right side (carousel) - use react list */}
+				{/* <div className='w-1/2 relative'> */}
+					{/* Carousel container */}
+					{/* <div
+						iv
+						className='overflow-hidden w-full h-96 border-2 border-blue-400 rounded-lg'> */}
+						{/* Slide images */}
+						{/* <div
+							className='flex transition-transform duration-700 ease-in-out'
+							style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+							{images.map((image, index) => (
+								<div key={index} className='min-w-full h-full'>
+									<img
+										src={Rectangle24}
+										alt={`Slide ${index + 1}`}
+										className='w-full h-full object-cover'
+									/>
+								</div>
+							))}
+						</div> */}
+					{/* </div> */}
+				{/* </div> */}
+			</div>
+
+			{/* Sharing */}
+
+		<div className='flex items-center flex-col font-poppins'>
+			<p>Share your setup with</p>
+			<h2 className='font-bold text-3xl'>#FuniroFurniture</h2>
+		</div>
+		<div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-9 gap-4 py-6' >
+				<img src={rectangle36} alt='flower pot' className=''/>
+				<img src={rectangle37} alt='brown chair' className=''/>
+				<img src={rectangle38} alt='laptop on desk' className=''/>
+				<img src={rectangle39} alt='stools' className=''/>
+				<img src={rectangle40} alt='dining set' className=''/>
+				<img src={rectangle41} alt='photo frame' className=''/>
+				<img src={rectangle43} alt='bed' className=''/>
+				<img src={rectangle44} alt='kitchen backsplash' className=''/>
+				<img src={rectangle45} alt='outdoor dining set' className=''/>
+				
+		</div>
+		<div className="border-t border-gray-300 my-8"></div>
 		</>
 	);
 };

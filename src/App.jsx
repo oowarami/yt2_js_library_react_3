@@ -10,6 +10,7 @@ import Details from './components/details/Details';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import Error from './components/error/Error';
+import Footer from './components/footer/Footer';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
 				{/* error page for any other route that is added that is not on our page */}
 				<Route path='*' element={<Error />} />
 			</Routes>
+			<Footer/>
 		</>
 	);
 }
