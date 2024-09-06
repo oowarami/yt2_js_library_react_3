@@ -399,7 +399,7 @@ const Home = () => {
 
 			{/* Inspiration */}
 			<div className='bg-inspiration w-full my-20 mx-auto'>
-				<div className=' text-black font-poppins p-10 flex flex-row'>
+				<div className=' text-black font-poppins p-10 flex flex-col lg:flex-row'>
 					{/* left side (text section)*/}
 					<div>
 						<h2 className='font-bold text-3xl'>
@@ -416,9 +416,9 @@ const Home = () => {
 					</div>
 					{/* right side (carousel) */}
 					<div className='relative w-1/3 left-1/2 transform -translate-x-1/2'>
-						<div className='overflow-hidden w-full h-96 rounded-lg'>
+						<div className='lg:overflow-hidden w-full h-96 rounded-lg'>
 							<div
-								className='flex transition-transform duration-700 ease-in-out'
+								className='overflow-hidden flex transition-transform duration-700 ease-in-out'
 								style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
 								{slides.map((slide, index) => (
 									<div key={index} className='min-w-full h-full'>
