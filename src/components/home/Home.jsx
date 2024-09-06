@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 // hero image
 import scandanavian from '../../assets/images/home/hero/scandinavian-background1.png';
 // browse range images
@@ -14,10 +14,7 @@ import grifo from '../../assets/images/home/products/grifo.png';
 import muggo from '../../assets/images/home/products/muggo.png';
 import pingky from '../../assets/images/home/products/pingky.png';
 import potty from '../../assets/images/home/products/potty.png';
-// inspiration images
-import Rectangle24 from '../../assets/images/home/inspiration/Rectangle24.png';
-import Rectangle25 from '../../assets/images/home/inspiration/Rectangle25.png';
-import Rectangle26 from '../../assets/images/home/inspiration/Rectangle26.png';
+
 // sharing images
 import rectangle36 from '../../assets/images/home/sharing/Rectangle36.png';
 import rectangle37 from '../../assets/images/home/sharing/Rectangle37.png';
@@ -31,9 +28,12 @@ import rectangle45 from '../../assets/images/home/sharing/Rectangle45.png';
 // custom hooks
 import { useCarousel } from '../customHooks/useCarousel';
 
+// react icons
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 const Home = () => {
-	// let {currentSlide,setCurrentSlide, interval,setInterval,clearInterval} = useCarousel(0);
+	let { currentSlide, slides, nextSlide, prevSlide } = useCarousel();
+
 	return (
 		<>
 			<div className='relative w-full h-[70vh] md:h-screen'>
@@ -61,7 +61,9 @@ const Home = () => {
 			<div>
 				<div className='flex flex-col items-center font-poppins'>
 					<h2 className='font-bold text-2xl'>Browse The Range</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<p className='text-center'>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					</p>
 				</div>
 				<div className='py-10 px-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 '>
 					{/* card 1 */}
@@ -102,6 +104,9 @@ const Home = () => {
 					<div className='py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
 						{/* card 1 */}
 						<div className='relative group w-full max-w-xs overflow-hidden rounded-lg shadow-lg bg-box transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl'>
+							<span className='absolute right-1/4 h-12 w-12 text-center py-3 my-10 justify-end text-white bg-[#E97171] rounded-full'>
+								-30%
+							</span>
 							<img
 								src={slytherine}
 								alt='Slytherine'
@@ -173,6 +178,9 @@ const Home = () => {
 
 						{/* card 3 */}
 						<div className='relative group w-full max-w-xs overflow-hidden rounded-lg shadow-lg bg-box transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl'>
+							<span className='absolute right-1/4 h-12 w-12 text-center py-3 my-10 justify-end text-white bg-[#E97171] rounded-full'>
+								-50%
+							</span>
 							<img src={lolito} alt='Lolito' className='w-full object-cover ' />
 							{/* overlay content */}
 							<div className='absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
@@ -206,6 +214,9 @@ const Home = () => {
 
 						{/* card 4 */}
 						<div className='relative group w-full max-w-xs overflow-hidden rounded-lg shadow-lg bg-box transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl'>
+							<span className='absolute right-1/4 h-12 w-12 text-center py-3 my-10 justify-end text-white bg-[#2EC1AC] rounded-full'>
+								New
+							</span>
 							<img
 								src={respira}
 								alt='Respira'
@@ -275,6 +286,9 @@ const Home = () => {
 
 						{/* card 2 */}
 						<div className='relative group w-full max-w-xs overflow-hidden rounded-lg shadow-lg bg-box transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl'>
+							<span className='absolute right-1/4 h-12 w-12 text-center py-3 my-10 justify-end text-white bg-[#2EC1AC] rounded-full'>
+								New
+							</span>
 							<img src={muggo} alt='Muggo' className='w-full object-cover' />
 							{/* overlay content */}
 							<div className='absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
@@ -305,6 +319,9 @@ const Home = () => {
 
 						{/* card 3 */}
 						<div className='relative group w-full max-w-xs overflow-hidden rounded-lg shadow-lg bg-box transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl'>
+							<span className='absolute right-1/4 h-12 w-12 text-center py-3 my-10 justify-end text-white bg-[#E97171] rounded-full'>
+								-50%
+							</span>
 							<img src={pingky} alt='Pingky' className='w-full object-cover ' />
 							{/* overlay content */}
 							<div className='absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
@@ -338,6 +355,9 @@ const Home = () => {
 
 						{/* card 4 */}
 						<div className='relative group w-full max-w-xs overflow-hidden rounded-lg shadow-lg bg-box transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl'>
+							<span className='absolute right-1/4 h-12 w-12 text-center py-3 my-10 justify-end text-white bg-[#2EC1AC] rounded-full'>
+								New
+							</span>
 							<img src={potty} alt='Potty' className='w-full object-cover ' />
 							{/* overlay content */}
 							<div className='absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
@@ -387,60 +407,63 @@ const Home = () => {
 							inspiration
 						</h2>
 						<p className='py-2'>
-							Our designer already made a lot of beautiful <br /> prototipe of
+							Our designer already made a lot of beautiful <br /> prototype of
 							rooms that inspire you
 						</p>
 						<button className='text-white font-semibold bg-secondary border-secondary px-8 my-6'>
 							Explore More
 						</button>
 					</div>
-					{/* right side */}
-					<div className='flex items-center'>Carousel</div>
+					{/* right side (carousel) */}
+					<div className='relative w-1/3 left-1/2 transform -translate-x-1/2'>
+						<div className='overflow-hidden w-full h-96 rounded-lg'>
+							<div
+								className='flex transition-transform duration-700 ease-in-out'
+								style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+								{slides.map((slide, index) => (
+									<div key={index} className='min-w-full h-full'>
+										<img
+											src={slide.url}
+											alt={slide.title}
+											className='w-full h-full object-cover'
+										/>
+									</div>
+								))}
+							</div>
+						</div>
+						{/* Next/Prev Buttons */}
+						<button
+							onClick={prevSlide}
+							className='absolute left-2 bg-white text-secondary p-2 rounded'>
+							<IoIosArrowBack />
+						</button>
+						<button
+							onClick={nextSlide}
+							className='absolute  right-2 bg-white text-secondary p-2 rounded'>
+							<IoIosArrowForward />
+						</button>
+					</div>
 				</div>
-
-				{/* right side (carousel) - use react list */}
-				{/* <div className='w-1/2 relative'> */}
-					{/* Carousel container */}
-					{/* <div
-						iv
-						className='overflow-hidden w-full h-96 border-2 border-blue-400 rounded-lg'> */}
-						{/* Slide images */}
-						{/* <div
-							className='flex transition-transform duration-700 ease-in-out'
-							style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
-							{images.map((image, index) => (
-								<div key={index} className='min-w-full h-full'>
-									<img
-										src={Rectangle24}
-										alt={`Slide ${index + 1}`}
-										className='w-full h-full object-cover'
-									/>
-								</div>
-							))}
-						</div> */}
-					{/* </div> */}
-				{/* </div> */}
 			</div>
 
 			{/* Sharing */}
 
-		<div className='flex items-center flex-col font-poppins'>
-			<p>Share your setup with</p>
-			<h2 className='font-bold text-3xl'>#FuniroFurniture</h2>
-		</div>
-		<div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-9 gap-4 py-6' >
-				<img src={rectangle36} alt='flower pot' className=''/>
-				<img src={rectangle37} alt='brown chair' className=''/>
-				<img src={rectangle38} alt='laptop on desk' className=''/>
-				<img src={rectangle39} alt='stools' className=''/>
-				<img src={rectangle40} alt='dining set' className=''/>
-				<img src={rectangle41} alt='photo frame' className=''/>
-				<img src={rectangle43} alt='bed' className=''/>
-				<img src={rectangle44} alt='kitchen backsplash' className=''/>
-				<img src={rectangle45} alt='outdoor dining set' className=''/>
-				
-		</div>
-		<div className="border-t border-gray-300 my-8"></div>
+			<div className='flex items-center flex-col font-poppins'>
+				<p>Share your setup with</p>
+				<h2 className='font-bold text-3xl'>#FuniroFurniture</h2>
+			</div>
+			<div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-9 gap-4 py-6'>
+				<img src={rectangle36} alt='flower pot' className='' />
+				<img src={rectangle37} alt='brown chair' className='' />
+				<img src={rectangle38} alt='laptop on desk' className='' />
+				<img src={rectangle39} alt='stools' className='' />
+				<img src={rectangle40} alt='dining set' className='' />
+				<img src={rectangle41} alt='photo frame' className='' />
+				<img src={rectangle43} alt='bed' className='' />
+				<img src={rectangle44} alt='kitchen backsplash' className='' />
+				<img src={rectangle45} alt='outdoor dining set' className='' />
+			</div>
+			<div className='border-t border-gray-300 my-8'></div>
 		</>
 	);
 };
