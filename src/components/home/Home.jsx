@@ -1,35 +1,18 @@
 import React, { useState } from 'react';
-// hero image
-import scandanavian from '../../assets/images/home/hero/scandinavian-background1.png';
-// browse range images
-import dining from '../../assets/images/home/browse/dining.png';
-import living from '../../assets/images/home/browse/living.png';
-import bedroom from '../../assets/images/home/browse/bedroom.png';
-// our products images
-import slytherine from '../../assets/images/home/products/slytherine.png';
-import leviosa from '../../assets/images/home/products/leviosa.png';
-import lolito from '../../assets/images/home/products/lolito.png';
-import respira from '../../assets/images/home/products/respira.png';
-import grifo from '../../assets/images/home/products/grifo.png';
-import muggo from '../../assets/images/home/products/muggo.png';
-import pingky from '../../assets/images/home/products/pingky.png';
-import potty from '../../assets/images/home/products/potty.png';
-
-// sharing images
-import rectangle36 from '../../assets/images/home/sharing/Rectangle36.png';
-import rectangle37 from '../../assets/images/home/sharing/Rectangle37.png';
-import rectangle38 from '../../assets/images/home/sharing/Rectangle38.png';
-import rectangle39 from '../../assets/images/home/sharing/Rectangle39.png';
-import rectangle40 from '../../assets/images/home/sharing/Rectangle40.png';
-import rectangle41 from '../../assets/images/home/sharing/Rectangle41.png';
-import rectangle43 from '../../assets/images/home/sharing/Rectangle43.png';
-import rectangle44 from '../../assets/images/home/sharing/Rectangle44.png';
-import rectangle45 from '../../assets/images/home/sharing/Rectangle45.png';
+// hero image from cloudinary
+import { hero } from '../../../data/home.json';
+// browse range images from cloudinary
+import { browse } from '../../../data/browse-range.json';
+// our products images from cloudinary
+import { product } from '../../../data/product.json';
+// sharing images from cloudinary
+import { sharing } from '../../../data/sharing.json';
 // custom hooks
 import { useCarousel } from '../customHooks/useCarousel';
-
 // react icons
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+// cloudinary
+import { Image } from 'cloudinary-react';
 
 const Home = () => {
 	let { currentSlide, slides, nextSlide, prevSlide } = useCarousel();
@@ -38,7 +21,12 @@ const Home = () => {
 		<>
 			<div className='relative w-full h-[70vh] md:h-screen'>
 				{/* background image */}
-				<img src={scandanavian} alt='background image' />
+				{/* <img src={scandanavian} alt='background image' /> */}
+				<Image
+					publicId={hero.scandinavian.publicId}
+					cloudName={hero.scandinavian.cloudName}
+					loading='lazy'
+				/>
 
 				{/* text overlay */}
 				<div className='absolute top-1/4 right-12 bg-[#FBEAD1] p-8 md:p-12 rounded-lg font-poppins'>
@@ -59,7 +47,7 @@ const Home = () => {
 			</div>
 
 			<div>
-				<div className='flex flex-col items-center font-poppins'>
+				<div className='flex flex-col items-center font-poppins py-10'>
 					<h2 className='font-bold text-2xl'>Browse The Range</h2>
 					<p className='text-center'>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -68,28 +56,34 @@ const Home = () => {
 				<div className='py-10 px-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 '>
 					{/* card 1 */}
 					<div className='flex flex-col font-poppins items-center'>
-						<img
-							src={dining}
-							alt='dining'
+						{/* optimizing using cloudinary */}
+						<Image
 							className='transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl'
+							publicId={browse.dining.publicId}
+							cloudName={browse.dining.cloudName}
+							loading='lazy'
 						/>
 						<span className='font-bold py-6'>Dining</span>
 					</div>
 					{/* card 2 */}
 					<div className='flex flex-col font-poppins items-center'>
-						<img
-							src={living}
-							alt='living'
+						{/* optimizing using cloudinary */}
+						<Image
 							className='transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl'
+							publicId={browse.living.publicId}
+							cloudName={browse.living.cloudName}
+							loading='lazy'
 						/>
 						<span className='font-bold py-6'>Living</span>
 					</div>
 					{/* card 3 */}
 					<div className='flex flex-col font-poppins items-center'>
-						<img
-							src={bedroom}
-							alt='bedroom'
+						{/* optimizing using cloudinary */}
+						<Image
 							className='transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl'
+							publicId={browse.bedroom.publicId}
+							cloudName={browse.bedroom.cloudName}
+							loading='lazy'
 						/>
 						<span className='font-bold py-6'>Bedroom</span>
 					</div>
@@ -107,10 +101,11 @@ const Home = () => {
 							<span className='absolute right-1/4 h-12 w-12 text-center py-3 my-10 justify-end text-white bg-[#E97171] rounded-full'>
 								-30%
 							</span>
-							<img
-								src={slytherine}
-								alt='Slytherine'
+							<Image
 								className='w-full object-cover'
+								publicId={product.slytherine.publicId}
+								cloudName={product.slytherine.cloudName}
+								loading='lazy'
 							/>
 							{/* overlay content */}
 							<div className='absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
@@ -144,10 +139,11 @@ const Home = () => {
 
 						{/* card 2 */}
 						<div className='relative group w-full max-w-xs overflow-hidden rounded-lg shadow-lg bg-box transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl'>
-							<img
-								src={leviosa}
-								alt='Leviosa'
+							<Image
 								className='w-full object-cover'
+								publicId={product.leviosa.publicId}
+								cloudName={product.leviosa.cloudName}
+								loading='lazy'
 							/>
 							{/* overlay content */}
 							<div className='absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
@@ -181,7 +177,12 @@ const Home = () => {
 							<span className='absolute right-1/4 h-12 w-12 text-center py-3 my-10 justify-end text-white bg-[#E97171] rounded-full'>
 								-50%
 							</span>
-							<img src={lolito} alt='Lolito' className='w-full object-cover ' />
+							<Image
+								className='w-full object-cover'
+								publicId={product.lolito.publicId}
+								cloudName={product.lolito.cloudName}
+								loading='lazy'
+							/>
 							{/* overlay content */}
 							<div className='absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
 								<button className='bg-white text-[#C1975B] font-semibold py-2 px-14 rounded-md mb-4'>
@@ -217,10 +218,11 @@ const Home = () => {
 							<span className='absolute right-1/4 h-12 w-12 text-center py-3 my-10 justify-end text-white bg-[#2EC1AC] rounded-full'>
 								New
 							</span>
-							<img
-								src={respira}
-								alt='Respira'
-								className='w-full object-cover '
+							<Image
+								className='w-full object-cover'
+								publicId={product.respira.publicId}
+								cloudName={product.respira.cloudName}
+								loading='lazy'
 							/>
 							{/* overlay content */}
 							<div className='absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
@@ -256,7 +258,12 @@ const Home = () => {
 					<div className='py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
 						{/* card 1 */}
 						<div className='relative group w-full max-w-xs overflow-hidden rounded-lg shadow-lg bg-box transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl'>
-							<img src={grifo} alt='Grifo' className='w-full object-cover' />
+							<Image
+								className='w-full object-cover'
+								publicId={product.grifo.publicId}
+								cloudName={product.grifo.cloudName}
+								loading='lazy'
+							/>
 							{/* overlay content */}
 							<div className='absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
 								<button className='bg-white text-[#C1975B] font-semibold py-2 px-14 rounded-md mb-4'>
@@ -289,7 +296,12 @@ const Home = () => {
 							<span className='absolute right-1/4 h-12 w-12 text-center py-3 my-10 justify-end text-white bg-[#2EC1AC] rounded-full'>
 								New
 							</span>
-							<img src={muggo} alt='Muggo' className='w-full object-cover' />
+							<Image
+								className='w-full object-cover'
+								publicId={product.muggo.publicId}
+								cloudName={product.muggo.cloudName}
+								loading='lazy'
+							/>
 							{/* overlay content */}
 							<div className='absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
 								<button className='bg-white text-[#C1975B] font-semibold py-2 px-14 rounded-md mb-4'>
@@ -322,23 +334,25 @@ const Home = () => {
 							<span className='absolute right-1/4 h-12 w-12 text-center py-3 my-10 justify-end text-white bg-[#E97171] rounded-full'>
 								-50%
 							</span>
-							<img src={pingky} alt='Pingky' className='w-full object-cover ' />
-							{/* overlay content */}
-							<div className='absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-								<button className='bg-white text-[#C1975B] font-semibold py-2 px-14 rounded-md mb-4'>
-									Add to cart
-								</button>
-								<div className='flex space-x-6 text-white'>
-									<span className='flex items-center space-x-2 text-sm'>
-										Share
-									</span>
-									<span className='flex items-center space-x-2 text-sm'>
-										Compare
-									</span>
-									<span className='flex items-center space-x-2 text-sm'>
-										Like
-									</span>
-								</div>
+							<Image
+								className='w-full object-cover'
+								publicId={product.pingky.publicId}
+								cloudName={product.pingky.cloudName}
+								loading='lazy'
+							/>
+							<button className='bg-white text-[#C1975B] font-semibold py-2 px-14 rounded-md mb-4'>
+								Add to cart
+							</button>
+							<div className='flex space-x-6 text-white'>
+								<span className='flex items-center space-x-2 text-sm'>
+									Share
+								</span>
+								<span className='flex items-center space-x-2 text-sm'>
+									Compare
+								</span>
+								<span className='flex items-center space-x-2 text-sm'>
+									Like
+								</span>
 							</div>
 							{/* product information */}
 							<div className='flex flex-col px-4 py-2'>
@@ -358,7 +372,12 @@ const Home = () => {
 							<span className='absolute right-1/4 h-12 w-12 text-center py-3 my-10 justify-end text-white bg-[#2EC1AC] rounded-full'>
 								New
 							</span>
-							<img src={potty} alt='Potty' className='w-full object-cover ' />
+							<Image
+								className='w-full object-cover'
+								publicId={product.potty.publicId}
+								cloudName={product.potty.cloudName}
+								loading='lazy'
+							/>
 							{/* overlay content */}
 							<div className='absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
 								<button className='bg-white text-[#C1975B] font-semibold py-2 px-14 rounded-md mb-4'>
@@ -422,10 +441,11 @@ const Home = () => {
 								style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
 								{slides.map((slide, index) => (
 									<div key={index} className='min-w-full h-full'>
-										<img
-											src={slide.url}
-											alt={slide.title}
-											className='w-full h-full object-cover'
+										<Image
+											className='w-full object-cover'
+											publicId={slide.publicId}
+											cloudName={slide.cloudName}
+											loading='lazy'
 										/>
 									</div>
 								))}
@@ -453,15 +473,51 @@ const Home = () => {
 				<h2 className='font-bold text-3xl'>#FuniroFurniture</h2>
 			</div>
 			<div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-9 gap-4 py-6'>
-				<img src={rectangle36} alt='flower pot' className='' />
-				<img src={rectangle37} alt='brown chair' className='' />
-				<img src={rectangle38} alt='laptop on desk' className='' />
-				<img src={rectangle39} alt='stools' className='' />
-				<img src={rectangle40} alt='dining set' className='' />
-				<img src={rectangle41} alt='photo frame' className='' />
-				<img src={rectangle43} alt='bed' className='' />
-				<img src={rectangle44} alt='kitchen backsplash' className='' />
-				<img src={rectangle45} alt='outdoor dining set' className='' />
+				<Image
+					publicId={sharing.rectangle36.publicId}
+					cloudName={sharing.rectangle36.cloudName}
+					loading='lazy'
+				/>
+				<Image
+					publicId={sharing.rectangle37.publicId}
+					cloudName={sharing.rectangle37.cloudName}
+					loading='lazy'
+				/>
+				<Image
+					publicId={sharing.rectangle38.publicId}
+					cloudName={sharing.rectangle38.cloudName}
+					loading='lazy'
+				/>
+				<Image
+					publicId={sharing.rectangle39.publicId}
+					cloudName={sharing.rectangle39.cloudName}
+					loading='lazy'
+				/>
+				<Image
+					publicId={sharing.rectangle40.publicId}
+					cloudName={sharing.rectangle40.cloudName}
+					loading='lazy'
+				/>
+				<Image
+					publicId={sharing.rectangle41.publicId}
+					cloudName={sharing.rectangle41.cloudName}
+					loading='lazy'
+				/>
+				<Image
+					publicId={sharing.rectangle43.publicId}
+					cloudName={sharing.rectangle43.cloudName}
+					loading='lazy'
+				/>
+				<Image
+					publicId={sharing.rectangle44.publicId}
+					cloudName={sharing.rectangle44.cloudName}
+					loading='lazy'
+				/>
+				<Image
+					publicId={sharing.rectangle45.publicId}
+					cloudName={sharing.rectangle45.cloudName}
+					loading='lazy'
+				/>
 			</div>
 			<div className='border-t border-gray-300 my-8'></div>
 		</>

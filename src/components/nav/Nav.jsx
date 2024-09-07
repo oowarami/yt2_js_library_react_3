@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 // react icons for responsive view
-import { FiMenu, FiShoppingCart } from 'react-icons/fi';
+import { FiMenu} from 'react-icons/fi';
 import { IoClose } from 'react-icons/io5';
 // nav images
 import logo from '../../assets/images/nav/logo.png';

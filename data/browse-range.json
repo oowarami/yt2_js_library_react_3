@@ -1,0 +1,19 @@
+{
+	"browse":{
+		"dining":{
+			"publicId":"https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724632/dining_qts67f.png",
+			"cloudName":"dbrqcasoo"
+		},
+		"living":{
+			"publicId":"https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724633/living_fh4ig7.png",
+			"cloudName":"dbrqcasoo"
+		},
+		"bedroom":{
+			"publicId":"https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724634/bedroom_ucmmvh.png",
+			"cloudName":"dbrqcasoo"
+		}
+	}
+	
+}
+
+

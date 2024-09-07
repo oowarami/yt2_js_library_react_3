@@ -1,0 +1,39 @@
+{
+	"product":{
+		"slytherine": {
+			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724713/slytherine_cntwmy.png",
+			"cloudName": "dbrqcasoo"
+		},
+		"leviosa": {
+			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724710/leviosa_qkjwwo.png",
+			"cloudName": "dbrqcasoo"
+		},
+		"lolito": {
+			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724710/lolito_imwnn1.png",
+			"cloudName": "dbrqcasoo"
+		},
+		"respira": {
+			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724712/respira_eqzorl.png",
+			"cloudName": "dbrqcasoo"
+		},
+		"grifo": {
+			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724709/grifo_vjemhw.png",
+			"cloudName": "dbrqcasoo"
+		},
+		"muggo": {
+			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724711/muggo_snjp3f.png",
+			"cloudName": "dbrqcasoo"
+		},
+		"pingky": {
+			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724712/pingky_opxc9g.png",
+			"cloudName": "dbrqcasoo"
+		},
+		"potty": {
+			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724711/potty_dqhlkg.png",
+			"cloudName": "dbrqcasoo"
+		}
+	}
+}
+
+
+
