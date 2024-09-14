@@ -1,39 +1,226 @@
 {
-	"product":{
-		"slytherine": {
+	"products": [
+		{
+			"name": "Slytherine",
+			"id": 1,
 			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724713/slytherine_cntwmy.png",
-			"cloudName": "dbrqcasoo"
+			"cloudName": "dbrqcasoo",
+			"price": "Rp 2.500.000",
+			"oldPrice": "Rp 3.500.000",
+			"discount": "-30%",
+			"new": false,
+			"description": "Stylish cafe chair",
+			"sku": "SS001",
+			"tags": "Chair, Coffee",
+			"category": "Chair"
 		},
-		"leviosa": {
+		{
+			"name": "Leviosa",
+			"id": 2,
 			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724710/leviosa_qkjwwo.png",
-			"cloudName": "dbrqcasoo"
+			"cloudName": "dbrqcasoo",
+			"price": "Rp 2.500.000",
+			"new": false,
+			"description": "Stylish cafe chair",
+			"sku": "SS002",
+			"tags": "Chair, Coffee",
+			"category": "Chair"
 		},
-		"lolito": {
+		{
+			"name": "Lolito",
+			"id": 3,
 			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724710/lolito_imwnn1.png",
-			"cloudName": "dbrqcasoo"
+			"cloudName": "dbrqcasoo",
+			"price": "Rp 7.000.000",
+			"oldPrice": "Rp 14.000.000",
+			"discount": "-50%",
+			"new": false,
+			"description": "Luxury big sofa",
+			"sku": "SS003",
+			"tags": "Chair, Coffee",
+			"category": "Chair"
 		},
-		"respira": {
+		{
+			"name": "Respira",
+			"id": 4,
 			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724712/respira_eqzorl.png",
-			"cloudName": "dbrqcasoo"
+			"cloudName": "dbrqcasoo",
+			"price": "Rp 500.000",
+			"new": true,
+			"description": "Outdoor bar table and stool",
+			"sku": "SS004",
+			"tags": "Chair, Coffee",
+			"category": "Chair"
 		},
-		"grifo": {
+		{
+			"name": "Grifo",
+			"id": 5,
 			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724709/grifo_vjemhw.png",
-			"cloudName": "dbrqcasoo"
+			"cloudName": "dbrqcasoo",
+			"price": "Rp 1.500.000",
+			"new": false,
+			"description": "Night Lamp",
+			"sku": "SS005",
+			"tags": "Lamp",
+			"category": "Electrical"
 		},
-		"muggo": {
+		{
+			"name": "Muggo",
+			"id": 6,
 			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724711/muggo_snjp3f.png",
-			"cloudName": "dbrqcasoo"
+			"cloudName": "dbrqcasoo",
+			"price": "Rp .150.000",
+			"new": true,
+			"description": "Small mug",
+			"sku": "SS005",
+			"tags": "Lamp",
+			"category": "Household"
 		},
-		"pingky": {
+		{
+			"name": "Pingky",
+			"id": 7,
 			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724712/pingky_opxc9g.png",
-			"cloudName": "dbrqcasoo"
+			"cloudName": "dbrqcasoo",
+			"price": "Rp 7.000.000",
+			"oldPrice": "Rp 14.000.000",
+			"new": false,
+			"discount": "-50%",
+			"description": "Cute bed set",
+			"sku": "SS005",
+			"tags": "bed, sleep",
+			"category": "Bedding"
 		},
-		"potty": {
+		{
+			"name": "Potty",
+			"id": 8,
 			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724711/potty_dqhlkg.png",
-			"cloudName": "dbrqcasoo"
+			"cloudName": "dbrqcasoo",
+			"price": "Rp 500.000",
+			"new": true,
+			"description": "Minimalist flower pot",
+			"sku": "SS008",
+			"tags": "Pot, flower, plant",
+			"category": "Gardening"
+		},
+		{
+			"name": "Velora",
+			"id": 9,
+			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724713/slytherine_cntwmy.png",
+			"cloudName": "dbrqcasoo",
+			"price": "Rp 2.500.000",
+			"oldPrice": "Rp 3.500.000",
+			"discount": "-30%",
+			"new": false,
+			"description": "Stylish cafe chair",
+			"sku": "SS009",
+			"tags": "Sofa, Chair, Home, Shop",
+			"category": "Chair"
+		},
+		{
+			"name": "Aria",
+			"id": 10,
+			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724710/leviosa_qkjwwo.png",
+			"cloudName": "dbrqcasoo",
+			"price": "Rp 2.500.000",
+			"new": false,
+			"description": "Stylish cafe chair",
+			"sku": "SS010",
+			"tags": "Sofa, Chair, Home, Shop",
+			"category": "Chair"
+		},
+		{
+			"name": "Silk Soft",
+			"id": 11,
+			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724710/lolito_imwnn1.png",
+			"cloudName": "dbrqcasoo",
+			"price": "Rp 7.000.000",
+			"oldPrice": "Rp 14.000.000",
+			"discount": "-50%",
+			"new": false,
+			"description": "Luxury big sofa",
+			"sku": "SS011",
+			"tags": "Sofa, Chair, Home, Shop",
+			"category": "Sofa"
+		},
+		{
+			"name": "Breeze Bar ",
+			"id": 12,
+			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724712/respira_eqzorl.png",
+			"cloudName": "dbrqcasoo",
+			"price": "Rp 500.000",
+			"new": true,
+			"description": "Outdoor bar table and stool",
+			"sku": "SS0012",
+			"tags": "Hosting",
+			"category": "Outdoor"
+		},
+		{
+			"name": "Lumina",
+			"id": 13,
+			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724709/grifo_vjemhw.png",
+			"cloudName": "dbrqcasoo",
+			"price": "Rp 1.500.000",
+			"new": false,
+			"description": "Night Lamp",
+			"sku": "SS013",
+			"tags": "Lamp, light",
+			"category": "Electrical"
+		},
+		{
+			"name": "Sip Crest",
+			"id": 14,
+			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724711/muggo_snjp3f.png",
+			"cloudName": "dbrqcasoo",
+			"price": "Rp .150.000",
+			"new": true,
+			"description": "Small mug",
+			"sku": "SS014",
+			"tags": "cup, coffee, tea",
+			"category": "Household"
+		},
+		{
+			"name": "Dream Nest",
+			"id": 15,
+			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724712/pingky_opxc9g.png",
+			"cloudName": "dbrqcasoo",
+			"price": "Rp 7.000.000",
+			"oldPrice": "Rp 14.000.000",
+			"new": false,
+			"discount": "-50%",
+			"description": "Cute bed set",
+			"sku": "SS015",
+			"tags": "bed, sleep",
+			"category": "Bedding"
+		},
+		{
+			"name": "Pure Bloom",
+			"id": 16,
+			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1725724711/potty_dqhlkg.png",
+			"cloudName": "dbrqcasoo",
+			"price": "Rp 500.000",
+			"new": true,
+			"description": "Minimalist flower pot",
+			"sku": "SS005",
+			"tags": "Pot, flower, plant",
+			"category": "Gardening"
+		},
+		{
+			"name": "Asgaard Sofa",
+			"id": 17,
+			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1726184893/Asgaard_Sofa_shyfmr.png",
+			"cloudName": "dbrqcasoo",
+			"price": "Rp 250.000",
+			"new": true,
+			"description": "Luxury big sofa",
+			"sku": "SS017",
+			"tags": "Sofa, Chair, Home, Shop",
+			"category": "Sofa"
 		}
-	}
+	],
+	"sizes":[
+		"XS", "S", "M", "L","XL"
+	],
+	"colors":[
+		"#816DFA", "#000000", "#B88E2F"
+	]
 }
-
-
-

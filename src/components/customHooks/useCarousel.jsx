@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import carouselData from "../../../data/inspiration.json";
 
 export const useCarousel = () => {
-	const slides = carouselData.inspiration;
+	const slides = Object.entries(carouselData.inspiration || []);
 	let [currentSlide, setCurrentSlide] =useState (0);
 	 // Automatically change slide every 3 seconds
 	useEffect(() => {

@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 // react icons for responsive view
-import { FiMenu} from 'react-icons/fi';
+import { FiMenu } from 'react-icons/fi';
 import { IoClose } from 'react-icons/io5';
-// nav images
-import logo from '../../assets/images/nav/logo.png';
-import accountAlert from '../../assets/images/nav/accountAlert.svg';
-import search from '../../assets/images/nav/search.svg';
-import heart from '../../assets/images/nav/heart.svg';
-import shoppingCart from '../../assets/images/nav/shoppingCart.svg';
+// nav images from cloudinary
+import { nav } from '../../../data/nav.json';
+// import accountAlert from '../../assets/images/nav/accountAlert.svg';
+// import search from '../../assets/images/nav/search.svg';
+// import heart from '../../assets/images/nav/heart.svg';
+// import shoppingCart from '../../assets/images/nav/shoppingCart.svg';
+
+// cloudinary
+import { Image } from 'cloudinary-react';
 
 const Nav = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +22,11 @@ const Nav = () => {
 				<div className='flex justify-between items-center px-8 py-4'>
 					{/* nav logo */}
 					<div className='flex items-center'>
-						<img src={logo} alt='logo' className='h-8' />
+						<Image
+							publicId={nav.logo.publicId}
+							cloudName={nav.logo.cloudName}
+							loading='lazy'
+						/>
 					</div>
 
 					{/* Hamburger menu button for mobile (Top-right position in mobile view) */}
@@ -68,10 +75,30 @@ const Nav = () => {
 
 						{/* nav icons */}
 						<div className='flex space-x-4'>
-							<img src={accountAlert} alt='Account' />
+							{/* <img src={accountAlert} alt='Account' />
 							<img src={search} alt='Search' />
 							<img src={heart} alt='Wishlist' />
-							<img src={shoppingCart} alt='Cart' />
+							<img src={shoppingCart} alt='Cart' /> */}
+							<Image
+								publicId={nav.account.publicId}
+								cloudName={nav.account.cloudName}
+								loading='lazy'
+							/>
+							<Image
+								publicId={nav.search.publicId}
+								cloudName={nav.search.cloudName}
+								loading='lazy'
+							/>
+							<Image
+								publicId={nav.heart.publicId}
+								cloudName={nav.heart.cloudName}
+								loading='lazy'
+							/>
+							<Image
+								publicId={nav.cart.publicId}
+								cloudName={nav.cart.cloudName}
+								loading='lazy'
+							/>
 						</div>
 					</div>
 				</div>

@@ -22,8 +22,8 @@ function App() {
 			<Routes>
 				<Route path='/home' element={<Home />} />
 				<Route path='/shop' element={<Shop />} />
-				{/* /shop/id*/}
-				<Route path='/shop/:id' element={<Details />} />
+				{/* /shop/slug*/}
+				<Route path='/shop/:slug' element={<Details />} />
 				<Route path='/about' element={<About />} />
 				<Route path='/contact' element={<Contact />} />
 				{/* error page for any other route that is added that is not on our page */}

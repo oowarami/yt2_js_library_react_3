@@ -1,0 +1,25 @@
+{
+	"nav":{
+		"logo":{
+			"publicId":"https://res.cloudinary.com/dbrqcasoo/image/upload/v1726093123/logo_w2w0e2.png",
+			"cloudName":"dbrqcasoo"
+		},
+		"account":{
+			"publicId":"https://res.cloudinary.com/dbrqcasoo/image/upload/v1726093587/account_jbhz2l.svg",
+			"cloudName":"dbrqcasoo"
+		},
+		"search":{
+			"publicId":"https://res.cloudinary.com/dbrqcasoo/image/upload/v1726093587/search_owfcy9.svg",
+			"cloudName":"dbrqcasoo"
+		},
+		"heart":{
+			"publicId":"https://res.cloudinary.com/dbrqcasoo/image/upload/v1726093586/heart_orohqh.svg",
+			"cloudName":"dbrqcasoo"
+		},
+		"cart":{
+			"publicId":"https://res.cloudinary.com/dbrqcasoo/image/upload/v1726093585/cart_yxxufr.svg",
+			"cloudName":"dbrqcasoo"
+		}
+	}
+	
+}
