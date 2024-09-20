@@ -18,6 +18,7 @@ const CustomError = (props) => (
 const Footer = () => {
 	return (
 		<footer className='bg-white py-4 font-poppins'>
+		<div className='border-t border-gray-300 my-8'></div>
 			<div className='container mx-auto grid grid-cols-1 md:grid-cols-4 gap-x-6'>
 				{/*  First Column: Company Info  */}
 				<div className=''>

@@ -19,7 +19,16 @@
 		"cart":{
 			"publicId":"https://res.cloudinary.com/dbrqcasoo/image/upload/v1726093585/cart_yxxufr.svg",
 			"cloudName":"dbrqcasoo"
+		},
+		"shoppingCart":{
+			"publicId":"https://res.cloudinary.com/dbrqcasoo/image/upload/v1726693703/shoppingCart_r4o3uf.svg",
+			"cloudName":"dbrqcasoo"
+		},
+		"cancel":{
+			"publicId":"https://res.cloudinary.com/dbrqcasoo/image/upload/v1726701713/cancel_yfx7ro.svg",
+			"cloudName":"dbrqcasoo"
 		}
+
 	}
 	
 }

@@ -22,7 +22,7 @@ const Inspirations = () => {
 
         {/* Right side - slider */}
         <div className='w-full lg:w-full lg:pl-10'>
-          <div className='w-full h-96 rounded-lg overflow-hidden'>
+          <div className='w-full h-96 rounded-lg overflow-hidden bg-blue-100'>
             {/* Placeholder box for slider */}
             <p className='text-center text-lg'>Slider placeholder</p>
 						{/* <Slider /> */}

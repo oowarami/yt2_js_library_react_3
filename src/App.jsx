@@ -11,25 +11,32 @@ import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import Error from './components/error/Error';
 import Footer from './components/footer/Footer';
-
+import Compare from './components/compare/Compare';
+import { CartProvider } from './context/CartContext';
+import ShopBanner from './components/footer/shopBanner';
 
 function App() {
 	const [count, setCount] = useState(0);
 
 	return (
 		<>
-			<Nav />
-			<Routes>
-				<Route path='/home' element={<Home />} />
-				<Route path='/shop' element={<Shop />} />
-				{/* /shop/slug*/}
-				<Route path='/shop/:slug' element={<Details />} />
-				<Route path='/about' element={<About />} />
-				<Route path='/contact' element={<Contact />} />
-				{/* error page for any other route that is added that is not on our page */}
-				<Route path='*' element={<Error />} />
-			</Routes>
-			<Footer/>
+			<CartProvider>
+				<Nav />
+				<Routes>
+					<Route path='/home' element={<Home />} />
+					<Route path='/shop' element={<Shop />} />
+					{/* /shop/id*/}
+					<Route path='/shop/:id' element={<Details />} />
+					<Route path='/about' element={<About />} />
+					<Route path='/contact' element={<Contact />} />
+					{/* /compare/id*/}
+					<Route path='/compare/:productId' element={<Compare />} />
+
+					{/* error page for any other route that is added that is not on our page */}
+					<Route path='*' element={<Error />} />
+				</Routes>
+				<Footer />
+			</CartProvider>
 		</>
 	);
 }

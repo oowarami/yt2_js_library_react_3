@@ -1,0 +1,10 @@
+{
+	"products": [
+		{
+			"name": "background",
+			"id": 1,
+			"publicId": "https://res.cloudinary.com/dbrqcasoo/image/upload/v1726691265/compare-bg_nhsprw.png",
+			"cloudName": "dbrqcasoo"
+		}
+	]
+}

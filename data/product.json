@@ -12,7 +12,8 @@
 			"description": "Stylish cafe chair",
 			"sku": "SS001",
 			"tags": "Chair, Coffee",
-			"category": "Chair"
+			"category": "Chair",
+			"quantity": 0
 		},
 		{
 			"name": "Leviosa",

@@ -5,16 +5,14 @@ import { FiMenu } from 'react-icons/fi';
 import { IoClose } from 'react-icons/io5';
 // nav images from cloudinary
 import { nav } from '../../../data/nav.json';
-// import accountAlert from '../../assets/images/nav/accountAlert.svg';
-// import search from '../../assets/images/nav/search.svg';
-// import heart from '../../assets/images/nav/heart.svg';
-// import shoppingCart from '../../assets/images/nav/shoppingCart.svg';
 
 // cloudinary
 import { Image } from 'cloudinary-react';
+import CartIcon from './cartIcon';
 
 const Nav = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+
 
 	return (
 		<>
@@ -75,30 +73,26 @@ const Nav = () => {
 
 						{/* nav icons */}
 						<div className='flex space-x-4'>
-							{/* <img src={accountAlert} alt='Account' />
-							<img src={search} alt='Search' />
-							<img src={heart} alt='Wishlist' />
-							<img src={shoppingCart} alt='Cart' /> */}
+							
 							<Image
 								publicId={nav.account.publicId}
 								cloudName={nav.account.cloudName}
 								loading='lazy'
+								alt='account'
 							/>
 							<Image
 								publicId={nav.search.publicId}
 								cloudName={nav.search.cloudName}
 								loading='lazy'
+								alt='search'
 							/>
 							<Image
 								publicId={nav.heart.publicId}
 								cloudName={nav.heart.cloudName}
 								loading='lazy'
+								alt='wishlist'
 							/>
-							<Image
-								publicId={nav.cart.publicId}
-								cloudName={nav.cart.cloudName}
-								loading='lazy'
-							/>
+							<CartIcon /> 
 						</div>
 					</div>
 				</div>
