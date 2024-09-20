@@ -15,7 +15,6 @@ const Hero = () => {
 					loading='lazy'
 				/>
 
-
 				{/* text overlay */}
 				<div className='absolute top-1/3 right-12 bg-[#FBEAD1] p-8 md:p-12 rounded-lg font-poppins'>
 					<h2 className='text-sm uppercase tracking-wide text-gray-700 mb-4 font-bold'>

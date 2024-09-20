@@ -6,13 +6,23 @@ import { useCart } from '../../context/CartContext'; // Import CartContext
 
 const ProductCard = ({ product }) => {
   const [liked, setLiked] = useState(false); // Manage individual product like state
-  const { addToCart } = useCart(); // Use CartContext
+  const { addToCart, cartItems } = useCart(); // Use CartContext
   const navigate = useNavigate(); // For navigation
+
 
   // Function to handle adding a product to the cart
   const handleAddToCart = (product) => {
+    if (!product || !product.id || !product.price) {
+      console.error("Invalid product object:", product);
+      toast.error("Error adding product to cart. Product data is incomplete.");
+      return;
+    }
+    
     addToCart(product); // Add product to cart
     toast.success('Product added to cart!');
+    
+    // Debug: Check cart items after adding
+    console.log("Cart items after adding:", cartItems);
   };
 
   // Function to handle sharing
@@ -100,16 +110,12 @@ const ProductCard = ({ product }) => {
 						{/* Compare Button */}
 						<button
 							className="flex items-center space-x-2 text-sm bg-transparent"
-							onClick={handleCompare}
+							onClick={handleDetail}
 						>
 							Compare
 						</button>
 					</div>
-					<button 
-					className=" text-center text-sm bg-transparent rounded-md  text-white "
-					onClick={handleDetail}>
-					View
-					</button>
+					
         </div>
       </div>
 

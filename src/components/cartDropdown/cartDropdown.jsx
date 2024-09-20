@@ -32,6 +32,12 @@ const CartDropdown = ({ cartOpen, toggleCart}) => {
     navigate(`/shop/${productId}`); // Navigate to product details page
   };
 
+  	// Navigate to the compare page with the product's ID
+	const handleCompare = (productId) => {
+		navigate(`/compare/${productId.id}`);
+	};
+
+
   return (
     <div className='font-poppins '>
       {/* Overlay */}
@@ -119,7 +125,9 @@ const CartDropdown = ({ cartOpen, toggleCart}) => {
               <button className=' bg-transparent text-primary py-2 border-primary rounded-full hover:bg-secondary transition duration-300'>
                 Checkout
               </button>
-              <button className=' bg-transparent text-primary py-2 border-primary rounded-full hover:bg-secondary transition duration-300'>
+              <button className=' bg-transparent text-primary py-2 border-primary rounded-full hover:bg-secondary transition duration-300'
+              onClick={handleCompare}
+              >
                 Comparison
               </button>
             </div>

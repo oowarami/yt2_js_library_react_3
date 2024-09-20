@@ -19,8 +19,8 @@ The assignment is to create the home page of an e-commerce site
 [½]		•  and like button working
 [✅]	• cart slider opens on click
 [✅]	• closes both when a link is clicked in it or when user clicks outside the cart slider
-[❌] • redirect from product page to product comparison
-[❌] • add to cart count feature
+[✅] • redirect from product page to product comparison
+[✅] • add to cart count feature
 [❌] • view cart items from cart dropdown menu and checkout
 [❌] • blog page accessed from nav bar
 [❌] • product like and other expected functionalites

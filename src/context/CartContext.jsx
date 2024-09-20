@@ -50,7 +50,7 @@ export const CartProvider = ({ children }) => {
       // If product is not in the cart, add it
       return [...prevItems, { ...product, quantity: 1, price: cleanedPrice }];
     });
-    toggleCart(); // Open the cart when a product is added
+    // toggleCart(); // Open the cart when a product is added
   };
 
   // Function to remove a product from the cart

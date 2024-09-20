@@ -23,12 +23,16 @@ const CartIcon = () => {
 				onClick={toggleCart}
 			/>
 			{totalItems > 0 && (
-				<span className='absolute top-0 right-0 bg-red-500 text-white rounded-full h-6 w-6 flex items-center justify-center'>
+				<span className='absolute top-0 right-0 bg-red-500 text-white rounded-full h-4 w-4 flex items-center justify-center'>
 					{totalItems}
 				</span>
 			)}
 			{/* Cart Dropdown */}
-			<CartDropdown cartOpen={cartOpen} toggleCart={toggleCart} />
+			<CartDropdown 
+			cartOpen={cartOpen} 
+			toggleCart={toggleCart} 
+
+			/>
 		</div>
 	);
 };

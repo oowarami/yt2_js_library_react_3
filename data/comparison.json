@@ -1,0 +1,47 @@
+{
+  "comparisonTable": [
+    {
+      "category": "General",
+      "details": [
+        { "name": "Sales Package", "value1": "1 Sectional Sofa", "value2": "1 Three Seater, 2 Single Seaters" },
+        { "name": "Model Number", "value1": "TSCFABR022SSHS", "value2": "DSBUIR852SDS" },
+        { "name": "Secondary Material", "value1": "Solid Wood", "value2": "Solid Wood" },
+        { "name": "Configuration", "value1": "L-shaped", "value2": "L-shaped" },
+        { "name": "Upholstery Material", "value1": "Fabric + Cotton", "value2": "Fabric + Cotton" },
+        { "name": "Upholstery Color", "value1": "Bright Grey & Lion", "value2": "Bright Grey & Lion" }
+      ]
+    },
+    {
+      "category": "Product",
+      "details": [
+        { "name": "Filling Material", "value1": "Foam", "value2": "Mette" },
+        { "name": "Finish Type", "value1": "Bright Grey & Lion", "value2": "Bright Grey & Lion" },
+        { "name": "Adjustable Headrest", "value1": "No", "value2": "Yes" },
+        { "name": "Maximum Load Capacity", "value1": "200 kg", "value2": "300 kg" },
+        { "name": "Origin of Manufacture", "value1": "India", "value2": "India" }
+      ]
+    },
+    {
+      "category": "Dimensions",
+      "details": [
+        { "name": "Width", "value1": "265.02 cm", "value2": "295.12 cm" },
+        { "name": "Height", "value1": "75 cm", "value2": "76 cm" },
+        { "name": "Depth", "value1": "187.45 cm", "value2": "187.45 cm" },
+        { "name": "Weight", "value1": "65 kg", "value2": "65 kg" },
+        { "name": "Seat Height", "value1": "41.52 cm", "value2": "41.52 cm" },
+        { "name": "Leg Height", "value1": "5.46 cm", "value2": "5.46 cm" }
+      ]
+    },
+    {
+      "category": "Warranty",
+      "details": [
+        { "name": "Warranty Summary", "value1": "1 Year Manufacturing Warranty", "value2": "1/2 Year Manufacturing Warranty" },
+        { "name": "Warranty Service Type", "value1": "On-Site Warranty", "value2": "On-Site Warranty" },
+        { "name": "Covered in Warranty", "value1": "Manufacturing Defects", "value2": "Manufacturing Defects" },
+        { "name": "Not Covered in Warranty", "value1": "Wear & Tear, Damage from Usage", "value2": "Wear & Tear, Damage from Usage" },
+        { "name": "Domestic Warranty", "value1": "1 Year", "value2": "3 Months" }
+      ]
+    }
+  ]
+}
+

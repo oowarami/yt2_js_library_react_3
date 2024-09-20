@@ -21,17 +21,6 @@ const ProductGridHome = () => {
 		toast.success('Product added to cart!');
 	};
 
-	// Function to copy the current page URL to the clipboard and show a toast notification
-	// const handleShare = () => {
-	// 	navigator.clipboard
-	// 		.writeText(window.location.href)
-	// 		.then(() => {
-	// 			toast.success('Page URL copied!');
-	// 		})
-	// 		.catch((err) => {
-	// 			toast.error('Failed to copy URL');
-	// 		});
-	// };
 
 	// Function to toggle like status for a specific product
 	const handleLike = (productId) => {
@@ -54,10 +43,6 @@ const ProductGridHome = () => {
 		});
 	};
 
-	// Navigate to the compare page with the product's ID
-	const handleCompare = (productId) => {
-		navigate(`/compare/${productId.id}`);
-	};
 
 	// Navigate to the Shop page when 'Show More' is clicked
 	const handleShowMore = () => {
