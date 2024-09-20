@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Image } from 'cloudinary-react';
 import { toast } from 'react-toastify';
 import { useCart } from '../../context/CartContext'; // Import CartContext
+import 'react-toastify/dist/ReactToastify.css';
 
 const ProductCard = ({ product }) => {
   const [liked, setLiked] = useState(false); // Manage individual product like state
