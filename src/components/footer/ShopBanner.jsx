@@ -4,7 +4,7 @@ import { Image } from 'cloudinary-react'
 const ShopBanner = () => {
 	return (
 		<>
-	<div className='bg-box-light py-4 font-poppins mt-20 mb-0'>
+	<div className='bg-box-light p-20 font-poppins mt-20 lg:mb-[-20] h-[270px]'>
 			<div className='container mx-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 '>
 				{/*  First Column */}
 				<div className='font-bold flex flex-row gap-x-4'>

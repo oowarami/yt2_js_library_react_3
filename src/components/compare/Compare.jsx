@@ -8,6 +8,8 @@ import { ToastContainer, toast } from 'react-toastify';
 // import ProductCard from '../products/ProductCard';
 import comparisonTable from '../../../data/comparison.json';
 import { CiStar } from 'react-icons/ci';
+import Header from '../header/Header';
+import ShopBanner from '../footer/shopBanner';
 
 const Compare = () => {
 	const navigate = useNavigate(); // For navigation
@@ -24,33 +26,7 @@ const Compare = () => {
 
 	return (
 		<>
-			<div className='relative h-70 w-full font-poppins'>
-				{/* bg image */}
-				<Image
-					publicId='https://res.cloudinary.com/dbrqcasoo/image/upload/v1726867080/heroImage_abtoju.png'
-					cloudName='dbrqcasoo'
-					className='relative bg-cover py-0'
-					loading='lazy'
-				/>
-
-				{/* text overlay */}
-				<div className='absolute inset-0 flex flex-col items-center justify-center text-center text-primary bg-black bg-opacity-40'>
-				
-					{/* Title */}
-					<h1 className='text-4xl font-semibold'>Product Comparison</h1>
-					{/* Breadcrumb */}
-					<div className='text-sm mt-4'>
-						<ul className='flex space-x-2'>
-							<li className='hover:underline'>
-								<a href='/home'>Home</a>
-							</li>
-							<li>&gt;</li>
-							<li>Comparison</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
+			<Header title='Product Comparison' breadcrumb='Comparison'/>
 			{/* Content */}
 			<div className='grid lg:grid-cols-4 grid-cols-2 gap-6 font-poppins py-10'>
 				{/* Left Section */}
@@ -111,7 +87,6 @@ const Compare = () => {
 			<div className='p-8 font-poppins'>
 				<div className='overflow-x-auto'>
 					<table className='min-w-full table-auto border-collapse border border-gray-300'>
-						
 						{/* Body */}
 						<tbody>
 							{compareTable.map((section, index) => (
@@ -153,6 +128,7 @@ const Compare = () => {
 					</button>
 				</div>
 			</div>
+			<ShopBanner/> 
 		</>
 	);
 };

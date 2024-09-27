@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { useCart } from '../../context/CartContext'; // Import the CartContext
-import CartDropdown from '../cartDropdown/cartDropdown';
+import CartDropdown from '../cart/cartDropdown';
 // cloudinary
 import { Image } from 'cloudinary-react';
 // nav images from cloudinary
@@ -23,7 +23,7 @@ const CartIcon = () => {
 				onClick={toggleCart}
 			/>
 			{totalItems > 0 && (
-				<span className='absolute top-0 right-0 bg-red-500 text-white rounded-full h-4 w-4 flex items-center justify-center'>
+				<span className='absolute top-0 right-0 bg-red-500 text-white rounded-full h-3 w-3 flex items-center justify-center'>
 					{totalItems}
 				</span>
 			)}

@@ -17,11 +17,11 @@ const CustomError = (props) => (
 
 const Footer = () => {
 	return (
-		<footer className='bg-white py-4 font-poppins'>
-		<div className='border-t border-gray-300 my-8'></div>
+		<footer className='bg-white  font-poppins'>
+		<div className='border-t border-gray-300 '></div>
 			<div className='container mx-auto grid grid-cols-1 md:grid-cols-4 gap-x-6'>
 				{/*  First Column: Company Info  */}
-				<div className=''>
+				<div className='py-4 gap-y-6'>
 					<h2 className='text-lg font-bold'>Funiro.</h2>
 					<p className='text-gray-500 py-6'>
 						400 University Drive Suite 200 Coral Gables,
@@ -31,7 +31,7 @@ const Footer = () => {
 				</div>
 
 				{/* Second Column: Links  */}
-				<div>
+				<div className='py-4 gap-y-6'>
 					<h3 className='text-gray-500 font-semibold'>Links</h3>
 					<ul className='py-6'>
 						<li>
@@ -58,7 +58,7 @@ const Footer = () => {
 				</div>
 
 				{/* Third Column: Help  */}
-				<div>
+				<div className='py-4 gap-y-6'>
 					<h3 className='text-gray-500 font-semibold'>Help</h3>
 					<ul className='py-6'>
 						<li>
@@ -80,7 +80,7 @@ const Footer = () => {
 				</div>
 
 				{/* Fourth Column: Newsletter  */}
-				<div>
+				<div className='py-4 gap-y-6'>
 					<h3 className='text-gray-500 font-semibold'>Newsletter</h3>
 					{/* Formik form */}
 					<Formik
@@ -99,11 +99,7 @@ const Footer = () => {
 									placeholder='Enter Your Email Address'
 									className='bg-white border border-gray-300 p-2 mb-4'
 								/>
-								{/* Formik error validation */}
-								{/* {errors.email && touched.email ? (
-									<div>{errors.email}</div>
-								) : null} */}
-
+								
 								{/* Custom styled error message */}
 								<ErrorMessage name='email' component={CustomError} />
 

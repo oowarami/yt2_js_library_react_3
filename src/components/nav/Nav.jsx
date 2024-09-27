@@ -13,7 +13,6 @@ import CartIcon from './cartIcon';
 const Nav = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-
 	return (
 		<>
 			<nav className='fixed w-full top-0 z-50 bg-white shadow-md max-w-screen-2xl font-poppins'>
@@ -46,10 +45,8 @@ const Nav = () => {
 					</div>
 
 					{/*  nav links and icons for desktop and mobile views */}
-					<div
-						className={`flex-col md:flex-row md:flex items-center space-y-4 md:space-y-0 md:space-x-6 
-					${isMenuOpen ? 'flex' : 'hidden'} md:flex`}>
-						{/* nav links */}
+					{/* nav links */}
+					<div className='flex flex-row justify-center gap-x-6'>
 						<Link
 							className='hover:text-secondary hover:underline text-black'
 							to='/home'>
@@ -67,13 +64,20 @@ const Nav = () => {
 						</Link>
 						<Link
 							className='hover:text-secondary hover:underline text-black'
+							to='/blog'>
+							Blog
+						</Link>
+						<Link
+							className='hover:text-secondary hover:underline text-black'
 							to='/contact'>
 							Contact
 						</Link>
-
+					</div>
+					<div
+						className={`flex-col md:flex-row md:flex items-center space-y-4 md:space-y-0 md:space-x-6 
+					${isMenuOpen ? 'flex' : 'hidden'} md:flex`}>
 						{/* nav icons */}
 						<div className='flex space-x-4'>
-							
 							<Image
 								publicId={nav.account.publicId}
 								cloudName={nav.account.cloudName}
@@ -92,7 +96,7 @@ const Nav = () => {
 								loading='lazy'
 								alt='wishlist'
 							/>
-							<CartIcon /> 
+							<CartIcon />
 						</div>
 					</div>
 				</div>
