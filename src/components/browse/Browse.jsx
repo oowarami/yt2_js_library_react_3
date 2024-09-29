@@ -6,7 +6,7 @@ import { browse } from '../../../data/browse-range.json';
 const Browse = () => {
 	return (
 		<div>
-				<div className='flex flex-col items-center font-poppins py-10'>
+				<div className='flex flex-col items-center font-poppins lg:py-10 py-36'>
 					<h2 className='font-bold text-2xl'>Browse The Range</h2>
 					<p className='text-center'>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.

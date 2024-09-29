@@ -4,6 +4,10 @@ import { Image } from 'cloudinary-react';
 import { toast } from 'react-toastify';
 import { useCart } from '../../context/CartContext'; // Import CartContext
 import 'react-toastify/dist/ReactToastify.css';
+import { IoShareSocial} from "react-icons/io5";
+import { MdCompareArrows } from "react-icons/md";
+
+
 
 const ProductCard = ({ product }) => {
   const [liked, setLiked] = useState(false); // Manage individual product like state
@@ -89,13 +93,23 @@ const ProductCard = ({ product }) => {
         </button>
 
         <div className="flex flex-col">
-					<div className='flex space-x-4 text-white'>
+					<div className='flex text-white px-10 space-x-0'>
 						{/* Share Button */}
 						<button
 							className="flex items-center space-x-2 text-sm bg-transparent"
 							onClick={handleShare}
 						>
+            <IoShareSocial />
 							Share
+						</button>
+
+						{/* Compare Button */}
+						<button
+							className="flex items-center space-x-2 text-sm bg-transparent"
+							onClick={handleDetail}
+						>
+            <MdCompareArrows />
+							Compare
 						</button>
 
 						{/* Like Button */}
@@ -105,16 +119,13 @@ const ProductCard = ({ product }) => {
 							}`}
 							onClick={handleLike}
 						>
+            <Image
+              cloudName='dbrqcasoo'
+              publicId='https://res.cloudinary.com/dbrqcasoo/image/upload/v1727641658/like_fydzpy.svg'
+            />
 							{liked ? 'Liked' : 'Like'}
 						</button>
 
-						{/* Compare Button */}
-						<button
-							className="flex items-center space-x-2 text-sm bg-transparent"
-							onClick={handleDetail}
-						>
-							Compare
-						</button>
 					</div>
 					
         </div>

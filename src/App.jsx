@@ -11,6 +11,8 @@ const Details = lazy(() => import('./components/details/Details'));
 const About = lazy(() => import('./components/about/About'));
 const Contact = lazy(() => import('./components/contact/Contact'));
 const Error = lazy(() => import('./components/error/Error'));
+const Cart = lazy(() => import('./components/cart/Cart'));
+const Checkout = lazy(() => import('./components/cart/Checkout'));
 const Compare = lazy(() => import('./components/compare/Compare'));
 const Blog = lazy(() => import('./components/blog/Blog'));
 import { CartProvider } from './context/CartContext';
@@ -29,6 +31,8 @@ function App() {
 						<Route path='/about' element={<About />} />
 						<Route path='/blog' element={<Blog />} />
 						<Route path='/contact' element={<Contact />} />
+						<Route path='/cart/' element={<Cart />} />
+						<Route path='/checkout/' element={<Checkout />} />
 						{/* /compare/id*/}
 						<Route path='/compare/:productId' element={<Compare />} />
 

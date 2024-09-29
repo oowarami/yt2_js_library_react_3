@@ -1,6 +1,6 @@
 import React from 'react'
 import ProductGridShop from '../products/ProductGridShop'
-import ShopBanner from '../footer/shopBanner';
+import ShopBanner from '../reusableComponents/ShopBanner';
 
 const Shop = () => {
 	return (

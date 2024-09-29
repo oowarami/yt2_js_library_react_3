@@ -36,6 +36,14 @@ const CartDropdown = ({ cartOpen, toggleCart}) => {
 	const handleCompare = (productId) => {
 		navigate(`/compare/${productId.id}`);
 	};
+  	// Navigate to the cart page with the product's ID
+	const handleCart = () => {
+		navigate(`/cart/`);
+	};
+  	// Navigate to the checkout page with the product's ID
+	const handleCheckout = () => {
+		navigate(`/checkout/`);
+	};
 
 
   return (
@@ -119,10 +127,14 @@ const CartDropdown = ({ cartOpen, toggleCart}) => {
             <div className='border-t border-gray-300 my-8'></div>
 
             <div className='flex justify-center gap-x-2'>
-              <button className=' bg-transparent text-primary py-2 border-primary rounded-full hover:bg-secondary transition duration-300'>
+              <button className=' bg-transparent text-primary py-2 border-primary rounded-full hover:bg-secondary transition duration-300'
+              onClick={handleCart}
+              >
                 Cart
               </button>
-              <button className=' bg-transparent text-primary py-2 border-primary rounded-full hover:bg-secondary transition duration-300'>
+              <button className=' bg-transparent text-primary py-2 border-primary rounded-full hover:bg-secondary transition duration-300'
+              onClick={handleCheckout}
+              >
                 Checkout
               </button>
               <button className=' bg-transparent text-primary py-2 border-primary rounded-full hover:bg-secondary transition duration-300'

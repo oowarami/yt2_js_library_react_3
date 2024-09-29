@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../header/Header';
-import ShopBanner from '../footer/shopBanner';
+import Header from '../reusableComponents/header/Header';
+import ShopBanner from '../reusableComponents/ShopBanner';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { ToastContainer, toast } from 'react-toastify';
@@ -15,6 +15,14 @@ const Contact = () => {
 		name: Yup.string()
 			.min(2, 'Too Short!')
 			.max(50, 'Too Long!')
+			.required('Required'),
+		subject: Yup.string()
+			.min(2, 'Too Short!')
+			.max(110, 'Too Long!')
+			.required('Required'),
+		message: Yup.string()
+			.min(2, 'Too Short!')
+			.max(1000, 'Too Long!')
 			.required('Required'),
 	});
 
@@ -39,10 +47,10 @@ const Contact = () => {
 					{/* col 1 */}
 					<div className='flex flex-col'>
 						<div className='flex flex-col items-start px-60'>
-						<div className='flex flex-row gap-x-8'>
-							<FaMapMarkerAlt />
-							<h3 className='font-semibold'>Address</h3>
-						</div>
+							<div className='flex flex-row gap-x-8'>
+								<FaMapMarkerAlt />
+								<h3 className='font-semibold'>Address</h3>
+							</div>
 							<p className='px-12'>
 								236 5th SE Avenue, New <br />
 								York NY10000, United <br />
@@ -50,10 +58,10 @@ const Contact = () => {
 							</p>
 						</div>
 						<div className='flex flex-col items-start px-60 py-6'>
-						<div className='flex flex-row gap-x-8'>
-							<FaPhoneAlt />
-							<h3 className='font-semibold'>Phone</h3>
-						</div>
+							<div className='flex flex-row gap-x-8'>
+								<FaPhoneAlt />
+								<h3 className='font-semibold'>Phone</h3>
+							</div>
 							<p className='px-12'>
 								Mobile: +(84) 546-6789 <br />
 								Hotline: +(84) 456-6789
@@ -74,7 +82,7 @@ const Contact = () => {
 					<div className='flex flex-col items-end px-36 py-2'>
 						{/* Formik form */}
 						<Formik
-							initialValues={{ email: '' }}
+							initialValues={{ email: '', name: '', subject: '', message: '' }}
 							validationSchema={ContactSchema}
 							onSubmit={(values, { resetForm }) => {
 								toast.success('Messaged sent successfully!');
@@ -112,6 +120,7 @@ const Contact = () => {
 										type='textarea'
 										placeholder='This is optional'
 										className='bg-white border w-90 h-36 rounded border-light-gray px-2 py-0 mb-4'
+										style={{ textAlign: 'left', verticalAlign: 'top' }}
 									/>
 
 									{/* Custom styled error message */}
@@ -119,7 +128,7 @@ const Contact = () => {
 
 									<button
 										type='submit'
-										className='bg-white text-primary w-fit p-2 border-none hover:bg-[#A8774B] hover:text-white'>
+										className='bg-secondary hover:text-secondary w-44 mt-4 p-2 border-secondary hover:border-white hover:bg-white text-white'>
 										Submit
 									</button>
 								</Form>

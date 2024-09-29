@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { useCart } from '../../context/CartContext'; // Import the CartContext
-import CartDropdown from '../cart/cartDropdown';
+import CartDropdown from '../cart/CartDropdown';
 // cloudinary
 import { Image } from 'cloudinary-react';
 // nav images from cloudinary

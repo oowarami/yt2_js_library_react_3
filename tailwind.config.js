@@ -13,6 +13,7 @@ export default {
         'box-light':'#F9F1E7', 
         'med-gray':'#898989',
         'light-gray':'#B0B0B0',
+        'dark-gray':'#9F9F9F',
         'inspiration': '#FCF8F3'
       },
       fontFamily:{

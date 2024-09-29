@@ -8,8 +8,8 @@ import { ToastContainer, toast } from 'react-toastify';
 // import ProductCard from '../products/ProductCard';
 import comparisonTable from '../../../data/comparison.json';
 import { CiStar } from 'react-icons/ci';
-import Header from '../header/Header';
-import ShopBanner from '../footer/shopBanner';
+import Header from '../reusableComponents/header/Header';
+import ShopBanner from '../reusableComponents/ShopBanner';
 
 const Compare = () => {
 	const navigate = useNavigate(); // For navigation
